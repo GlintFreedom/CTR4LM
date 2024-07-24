@@ -19,7 +19,31 @@ def load_csv_as_df(file_path, extend_vocab="none"):
     if 'ml-1m' in file_path.lower():
         dataset = pd.read_csv(file_path, dtype={'Zip-code': 'str'})
         fields = ["User ID", "Gender", "Age", "Occupation", "Zipcode", "Movie ID", "Title", "Film genre", "Label"]
-        dataset = dataset[fields]
+        dataset = dataset[fields].replace({'M': 'Male', 'F': 'Female'})
+        occupation_dict = {
+            0: "other",
+            1:  "academic/educator",
+            2:  "artist",
+            3:  "clerical/admin",
+            4:  "college/grad student", 
+            5:  "customer service", 
+            6:  "doctor/health care", 
+            7:  "executive/managerial", 
+            8:  "farmer", 
+            9:  "homemaker", 
+            10:  "K-12 student", 
+            11:  "lawyer", 
+            12:  "programmer", 
+            13:  "retired", 
+            14:  "sales/marketing", 
+            15:  "scientist", 
+            16:  "self-employed", 
+            17:  "technician/engineer", 
+            18:  "tradesman/craftsman", 
+            19:  "unemployed", 
+            20:  "writer"
+        }
+        dataset['Occupation'] = dataset['Occupation'].map(lambda x: occupation_dict[int(x)])
         if extend_vocab in ["prefix_none", "raw"]:
             dataset['User ID'] = dataset['User ID'].map(lambda x: f'U{x}')
             dataset['Movie ID'] = dataset['Movie ID'].map(lambda x: f'M{x}')
@@ -57,6 +81,7 @@ class MyDataset(Dataset):
         self.mode = mode
         self.n_layer = args.n_layer
         self.neighbors = self.ckg_propagation(args)
+        self.extend_vocab = args.extend_vocab
 
     def ckg_propagation(self, args):
         graph_dict = collections.defaultdict(list)
@@ -112,20 +137,25 @@ class MyDataset(Dataset):
     def _get_triple_tensor(self, neighbor_dict):
         h, r, t = [], [], []
         for i in range(self.n_layer):
-            h.append(torch.LongTensor([int(j[1:]) for j in neighbor_dict[i][0]]))
-            r.append(torch.LongTensor(neighbor_dict[i][1]))
-            t.append(torch.LongTensor([int(j[1:]) for j in neighbor_dict[i][2]]))
+            if self.extend_vocab == 'raw':
+                h.append(torch.LongTensor([int(j[1:]) for j in neighbor_dict[i][0]]))
+                r.append(torch.LongTensor(neighbor_dict[i][1]))
+                t.append(torch.LongTensor([int(j[1:]) for j in neighbor_dict[i][2]]))
+            else:
+                h.append(torch.LongTensor(neighbor_dict[i][0]))
+                r.append(torch.LongTensor(neighbor_dict[i][1]))
+                t.append(torch.LongTensor(neighbor_dict[i][2]))
         h = torch.stack(h)
         r = torch.stack(r)
         t = torch.stack(t)
         return torch.stack([h, r, t])
-
+    
     def __getitem__(self, idx):
         item = self.data.iloc[idx]
         user = item["User ID"]
         movie = item["Movie ID"]
-        shuffle_fields = item.index.tolist()
-        shuffle_fields.remove("Label")
+        user_fields = ["Gender", "Age", "Occupation", "Zipcode"]
+        movie_fields = ["Title", "Film genre"]
         label = item["Label"]
 
         user_neighbors = self.neighbors[user]
@@ -134,19 +164,33 @@ class MyDataset(Dataset):
         movie_neighbors = self._get_triple_tensor(movie_neighbors)
 
         if self.shuffle_fields:
-            random.shuffle(shuffle_fields)
+            random.shuffle(user_fields)
+            random.shuffle(movie_fields)
+        
+        # text = " ".join(
+        #     ["%s is %s." % (field, str(item[field]).strip()) for field in shuffle_fields]
+        # )
+        user_info = "\n        - ".join(["{}: {}".format(field, str(item[field]).strip()) for field in user_fields])
+        movie_info = "\n        - ".join(["{}: {}".format(field, str(item[field]).strip()) for field in movie_fields])
+        text = """  
+            User Descriptive Information:
+            - {}
 
-        shuffled_text = " ".join(
-            ["%s is %s." % (field, str(item[field]).strip()) for field in shuffle_fields]
-        )
-        encoding = self.tokenizer(shuffled_text, return_tensors="pt", padding="max_length", truncation=True,
-                                  max_length=512)
+            Movie Descriptive Information:
+            - {}
+            
+            Please speculate whether this user will click on the movie:
+            """.format(user_info, movie_info)
+        
+        # encoding = self.tokenizer(text, return_tensors="pt", padding="max_length", truncation=True,
+        #                           max_length=512)
         return {
-            'input_ids': encoding['input_ids'].flatten(),
-            'attention_mask': encoding['attention_mask'].flatten(),
+            # 'input_ids': encoding['input_ids'].flatten(),
+            # 'attention_mask': encoding['attention_mask'].flatten(),
+            'texts': text,
             'labels': torch.tensor(label, dtype=torch.long),
-            'user': torch.tensor(int(user[1:])),
-            'movie': torch.tensor(int(movie[1:])),
+            'user': torch.tensor(int(user[1:])) if self.extend_vocab == 'raw' else torch.tensor(user),
+            'movie': torch.tensor(int(movie[1:])) if self.extend_vocab == 'raw' else torch.tensor(movie),
             'user_neighbors': user_neighbors,
             'movie_neighbors': movie_neighbors
         }
@@ -155,11 +199,16 @@ class MyDataset(Dataset):
 class MyDataCollator(DataCollatorWithPadding):
     def __init__(self, tokenizer):
         super().__init__(tokenizer=tokenizer)
+        self.tokenizer = tokenizer
 
     def __call__(self, features: List[Dict[str, Union[torch.Tensor, Any]]]) -> Dict[str, torch.Tensor]:
         labels = torch.tensor([f['labels'] for f in features], dtype=torch.long)
-        input_ids = torch.stack([f['input_ids'] for f in features])
-        attention_mask = torch.stack([f['attention_mask'] for f in features])
+        # input_ids = torch.stack([f['input_ids'] for f in features])
+        # attention_mask = torch.stack([f['attention_mask'] for f in features])
+        texts = [f['texts'] for f in features]
+        encoding = self.tokenizer(texts, return_tensors="pt", padding=True, truncation=True)
+        input_ids = encoding['input_ids']
+        attention_mask = encoding['attention_mask']
 
         users = torch.stack([f['user'] for f in features])
         movies = torch.stack([f['movie'] for f in features])

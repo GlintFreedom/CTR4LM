@@ -65,7 +65,7 @@ def main():
 
     # Load tokenizer
     tokenizer = AutoTokenizer.from_pretrained(
-        args.model_name_or_path,
+        args.lm_model,
         cache_dir=args.cache_dir,
         use_fast=args.use_fast_tokenizer,
         revision=args.model_revision,
@@ -78,18 +78,19 @@ def main():
     train_df = load_csv_as_df(args.train_file, args.extend_vocab)
     valid_df = load_csv_as_df(args.valid_file, args.extend_vocab)
     test_df = load_csv_as_df(args.test_file, args.extend_vocab)
-    if "ml-1m" in args.train_file.lower():
-        extension_fields = ["User ID", "Movie ID"]
-    else:
-        extension_fields = []
-    tokenizer = vocabulary_extension(
-        tokenizer=tokenizer,
-        df_list=[train_df, test_df],
-        extension_method=args.extend_vocab,
-        extension_fields=extension_fields
-    )
-    logger.info("Tokenizer extended")
-    showTokenizer(tokenizer)
+    if args.extend_vocab == 'raw':
+        if "ml-1m" in args.train_file.lower():
+            extension_fields = ["User ID", "Movie ID"]
+        else:
+            extension_fields = []
+        tokenizer = vocabulary_extension(
+            tokenizer=tokenizer,
+            df_list=[train_df, test_df],
+            extension_method=args.extend_vocab,
+            extension_fields=extension_fields
+        )
+        logger.info("Tokenizer extended")
+        showTokenizer(tokenizer)
 
     datasets = {
         "train": MyDataset(train_df),
@@ -114,10 +115,7 @@ def main():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     logger.info(f"Using device: {device}")
 
-    model = MyModel(args, n_nodes, n_relations).to(device)
-
-    # IMPORTANT! Resize token embeddings
-    model.resize_token_embeddings(len(tokenizer))
+    model = MyModel(args, n_nodes, n_relations, tokenizer).to(device)
 
     optimizer = torch.optim.AdamW(model.parameters(), lr=args.learning_rate)
     criterion = nn.CrossEntropyLoss()

@@ -7,6 +7,7 @@ import pandas as pd
 THRESHOLD = 4
 
 def filter_data(data):
+    # filter data： remove users and movies with only zero labels (remove isolated nodes with no edges)
     users_with_only_zero_labels = data.groupby('User ID')['Label'].transform('max') == 0
     filtered_user_ids = data[users_with_only_zero_labels]['User ID'].unique()
     movies_with_only_zero_labels = data.groupby('Movie ID')['Label'].transform('max') == 0
@@ -42,7 +43,6 @@ if __name__ == '__main__':
     train_data = data.sample(frac=0.8, random_state=200)
     valid_test_data = data.drop(train_data.index)
 
-    # filter data： remove users and movies with only zero labels (remove isolated nodes with no edges)
     train_data = filter_data(train_data)
 
     unique_user_ids = train_data['User ID'].unique()

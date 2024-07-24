@@ -1,28 +1,93 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from transformers import BertModel
+from transformers import BertModel, GPT2LMHeadModel, GPT2Tokenizer
 
 
+def freeze_model_parameters(model):
+    for param in model.parameters():
+        param.requires_grad = False
+        
+        
 class MyModel(nn.Module):
-    def __init__(self, args, n_nodes, n_relations):
+    def __init__(self, args, n_nodes, n_relations, tokenizer):
         super(MyModel, self).__init__()
-        self.LM = BertModel.from_pretrained(args.model_name_or_path)
+        self.mode = args.model_mode
+        self.LM = BertModel.from_pretrained(args.lm_model)
+        
+        if args.extend_vocab == 'raw':
+            # IMPORTANT! Resize token embeddings
+            self.LM.resize_token_embeddings(len(tokenizer))
+        
         self.CTR = CTRModel(args, n_nodes, n_relations)
+        self.promptGeneator = EmbeddingToTextModel(args)
+        self.tokenizer = tokenizer
+        
         self.dropout = nn.Dropout(0.1)
         self.linear = nn.Linear(self.LM.config.hidden_size, 2)
         self.sigmoid = nn.Sigmoid()
+        
+        if args.model_mode != 'lm':
+            freeze_model_parameters(self.LM)
 
     def resize_token_embeddings(self, length):
         self.LM.resize_token_embeddings(length)
 
     def forward(self, users, movies, user_neighbors, movie_neighbors, input_ids, attention_mask):
-        CTR_outputs = self.CTR(users, movies, user_neighbors, movie_neighbors)
-        LM_outputs = self.LM(input_ids=input_ids, attention_mask=attention_mask)
-        pooled_output = LM_outputs.pooler_output
-        pooled_output = self.dropout(pooled_output)
-        logits = self.linear(pooled_output)
-        proba = self.sigmoid(logits)
+        if self.mode == 'ctr':
+            # [layer_num, batch_size, dim]
+            user_embeddings, item_embeddings = self.CTR(users, movies, user_neighbors, movie_neighbors)
+            proba = self.CTR.predict(user_embeddings, item_embeddings)
+        elif self.mode == 'lm':
+            LM_outputs = self.LM(input_ids=input_ids, attention_mask=attention_mask)
+            pooled_output = LM_outputs.pooler_output
+            pooled_output = self.dropout(pooled_output)
+            logits = self.linear(pooled_output)
+            proba = self.sigmoid(logits)
+        elif self.mode == 'ctr4lm':
+            # [layer_num, batch_size, dim]
+            user_embeddings, item_embeddings = self.CTR(users, movies, user_neighbors, movie_neighbors)
+            user_prompts = [self.promptGeneator(user_embeddings[i]) for i in range(self.CTR.n_layer)]
+            item_prompts = [self.promptGeneator(item_embeddings[i]) for i in range(self.CTR.n_layer)]
+
+            ctr_prompts = []
+            for batch_idx in range(len(user_prompts[0])):
+                user_ctr_prompt = "\n        - ".join(["Layer{}: {}".format(i, str(user_prompts[i][batch_idx]).strip()) for i in range(self.CTR.n_layer)])
+                item_ctr_prompt = "\n        - ".join(["Layer{}: {}".format(i, str(item_prompts[i][batch_idx]).strip()) for i in range(self.CTR.n_layer)])
+                ctr_prompt = """
+                User Collaboration Information:
+                - {}
+    
+                Movie Collaboration Information:
+                - {}
+    
+                """.format(user_ctr_prompt, item_ctr_prompt)
+                ctr_prompts.append(ctr_prompt)
+            encoded_prompts = self.tokenizer(ctr_prompts, return_tensors='pt', padding=True, truncation=True)
+            prompt_input_ids = encoded_prompts['input_ids']
+            prompt_attention_mask = encoded_prompts['attention_mask']
+            
+            # print(f'Original input_ids length: {input_ids.size(1)}')
+            # print(f'Original attention_mask length: {attention_mask.size(1)}')
+            # print(f'Prompt input_ids length: {prompt_input_ids.size(1)}')
+            # print(f'Prompt attention_mask length: {prompt_attention_mask.size(1)}')
+            prompt_input_ids = prompt_input_ids.to(input_ids.device)
+            prompt_attention_mask = prompt_attention_mask.to(input_ids.device)
+            updated_input_ids = torch.cat([input_ids, prompt_input_ids], dim=1)
+            updated_attention_mask = torch.cat([attention_mask, prompt_attention_mask], dim=1)
+
+            max_length = 512
+            if updated_input_ids.size(1) > max_length:
+                print(
+                    f"Warning: Input length {updated_input_ids.size(1)} exceeds the maximum length of {max_length}. Truncating.")
+                updated_input_ids = updated_input_ids[:, :max_length]
+                updated_attention_mask = updated_attention_mask[:, :max_length]
+            LM_outputs = self.LM(input_ids=updated_input_ids, attention_mask=updated_attention_mask)
+            pooled_output = LM_outputs.pooler_output
+            pooled_output = self.dropout(pooled_output)
+            logits = self.linear(pooled_output)
+            proba = self.sigmoid(logits)
+            
         return proba
 
 
@@ -65,9 +130,9 @@ class CTRModel(nn.Module):
         # [B, K, D]
         user_emb_origin = self.node_emb[users]  # Tensor([batch_size, n_factor=2, dim=64])
         # [B, D]
-        # user_embeddings.append(torch.sum(user_emb_origin, dim=1))     # Tensor([batch_size, dim=64])
+        user_embeddings.append(torch.sum(user_emb_origin, dim=1))     # Tensor([batch_size, dim=64])
         # [B, K, D]
-        user_embeddings.append(user_emb_origin)
+        # user_embeddings.append(user_emb_origin)
 
         # transpose from [batch_size, [h|r|t], n_layer, neighbor_size] to [[h|r|t], n_layer, batch_size, neighbor_size]
         users_triple = users_triple.permute(1, 2, 0, 3)
@@ -86,9 +151,9 @@ class CTRModel(nn.Module):
         # [B, K, D]
         item_emb_origin = self.node_emb[items]
         # [B, D]
-        # item_embeddings.append(torch.sum(item_emb_origin, dim=1))
+        item_embeddings.append(torch.sum(item_emb_origin, dim=1))
         # [B, K, D]
-        item_embeddings.append(item_emb_origin)
+        # item_embeddings.append(item_emb_origin)
 
         # transpose from [batch_size, [h|r|t], n_layer, neighbor_size] to [[h|r|t], n_layer, batch_size, neighbor_size]
         items_triple = items_triple.permute(1, 2, 0, 3)
@@ -99,7 +164,7 @@ class CTRModel(nn.Module):
             r_emb = self.relation_emb[items_triple[1][i]]
             # [B, N, K, D]
             t_emb = self.node_emb[items_triple[2][i]]
-            # [B, D]
+            # [B, K, D]
             item_emb_layer_i = self._knowledge_attention(h_emb, r_emb, t_emb)
             item_embeddings.append(item_emb_layer_i)
 
@@ -261,10 +326,30 @@ class CTRModel(nn.Module):
         att_emb = torch.mul(att_weights_norm.unsqueeze(-1), t_emb)  # Tensor([batch_size, neighbor_size=64, n_factor=2])
         # [B, K, D] <- Aggregated neighbor information
         emb_i = att_emb.sum(dim=1)  # Tensor([batch_size, n_factor=2, dim=64])
-
-        # k_weights_norm = F.softmax(emb_i, dim=1)
+        
+        k_weights_norm = F.softmax(emb_i, dim=1)
         # [B, D]
-        # emb = torch.sum(torch.mul(emb_i, k_weights_norm),dim=1)
+        emb = torch.sum(torch.mul(emb_i, k_weights_norm), dim=1)
         # emb = emb_i.sum(dim=1)  # Tensor([batch_size, dim=64])
 
-        return emb_i
+        return emb
+
+    
+class EmbeddingToTextModel(nn.Module):
+    def __init__(self, args):
+        super(EmbeddingToTextModel, self).__init__()
+        self.fc = nn.Linear(args.dim, args.hidden_dim)
+        self.LMdecoder = GPT2LMHeadModel.from_pretrained(args.prompt_model)
+        self.tokenizer = GPT2Tokenizer.from_pretrained(args.prompt_model)
+
+    def generate_text(self, logits):
+        token_ids = torch.argmax(logits, dim=-1)
+        texts = [self.tokenizer.decode(token_ids[i], skip_special_tokens=True) for i in range(logits.size(0))]
+        return texts
+
+    def forward(self, embedding):
+        hidden = self.fc(embedding)
+        outputs = self.LMdecoder(inputs_embeds=hidden)
+        outputs = outputs.logits
+        return self.generate_text(outputs)
+        

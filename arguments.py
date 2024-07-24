@@ -23,7 +23,7 @@ class MyArguments(TrainingArguments):
         default=42,
         metadata={"help": "Random seed."},
     )
-    model_name_or_path: Optional[str] = field(
+    lm_model: Optional[str] = field(
         default='models/bert-base-uncased',
         metadata={"help": "The LM model name or path for training."},
     )
@@ -107,7 +107,8 @@ class MyArguments(TrainingArguments):
         metadata={"help": "The patience for early stoppint strategy"}
     )
     extend_vocab: str = field(
-        default='raw',
+        # default='raw',
+        default=None,
         metadata={"help": "The method to extend the vocabulary. Default to `None` indicating no extension."}
     )
 
@@ -132,3 +133,18 @@ class MyArguments(TrainingArguments):
         default='decay_sum',
         metadata={"help": "the type of aggregator (sum, pool, concat)"}
     )
+    
+    # key arguments
+    model_mode: str = field(
+        default='ctr4lm',
+        metadata={"help": "`lm` means LM model only; `ctr` means CTR model only; `ctr4lm` means CTR concat LM."}
+    )
+    hidden_dim: int = field(
+        default=768,
+        metadata={"help": "ctr emb_dim ——> hidden dim ——> LM inputs"}
+    )
+    prompt_model: Optional[str] = field(
+        default='models/gpt2',
+        metadata={"help": "The model name or path to transform ctr embedding to language prompt."},
+    )
+    
