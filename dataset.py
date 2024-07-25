@@ -188,7 +188,7 @@ class MyDataset(Dataset):
             # 'input_ids': encoding['input_ids'].flatten(),
             # 'attention_mask': encoding['attention_mask'].flatten(),
             'texts': text,
-            'labels': torch.tensor(label, dtype=torch.long),
+            'labels': torch.tensor(label, dtype=torch.float),
             'user': torch.tensor(int(user[1:])) if self.extend_vocab == 'raw' else torch.tensor(user),
             'movie': torch.tensor(int(movie[1:])) if self.extend_vocab == 'raw' else torch.tensor(movie),
             'user_neighbors': user_neighbors,
@@ -202,7 +202,7 @@ class MyDataCollator(DataCollatorWithPadding):
         self.tokenizer = tokenizer
 
     def __call__(self, features: List[Dict[str, Union[torch.Tensor, Any]]]) -> Dict[str, torch.Tensor]:
-        labels = torch.tensor([f['labels'] for f in features], dtype=torch.long)
+        labels = torch.tensor([f['labels'] for f in features], dtype=torch.float)
         # input_ids = torch.stack([f['input_ids'] for f in features])
         # attention_mask = torch.stack([f['attention_mask'] for f in features])
         texts = [f['texts'] for f in features]

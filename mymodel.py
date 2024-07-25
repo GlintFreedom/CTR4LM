@@ -24,7 +24,7 @@ class MyModel(nn.Module):
         self.tokenizer = tokenizer
         
         self.dropout = nn.Dropout(0.1)
-        self.linear = nn.Linear(self.LM.config.hidden_size, 2)
+        self.linear = nn.Linear(self.LM.config.hidden_size, 1)  # suit for BCELoss
         self.sigmoid = nn.Sigmoid()
         
         if args.model_mode != 'lm':
@@ -86,8 +86,7 @@ class MyModel(nn.Module):
             pooled_output = LM_outputs.pooler_output
             pooled_output = self.dropout(pooled_output)
             logits = self.linear(pooled_output)
-            proba = self.sigmoid(logits)
-            
+            proba = self.sigmoid(logits).squeeze()
         return proba
 
 

@@ -10,6 +10,7 @@ from transformers import (
     BertModel,
 )
 import torch.nn as nn
+from sklearn.metrics import roc_auc_score, f1_score
 from dataset import load_csv_as_df, MyDataset, MyDataCollator
 from mymodel import MyModel
 
@@ -118,13 +119,15 @@ def main():
     model = MyModel(args, n_nodes, n_relations, tokenizer).to(device)
 
     optimizer = torch.optim.AdamW(model.parameters(), lr=args.learning_rate)
-    criterion = nn.CrossEntropyLoss()
+    criterion = nn.BCELoss()
 
     # Training loop
     epochs = args.num_train_epochs
     for epoch in range(epochs):
         model.train()
         total_loss = 0
+        train_auc_scores = []
+        train_f1_scores = []
         progress_bar = tqdm(train_loader, desc=f'Epoch {epoch + 1}/{epochs}', leave=False)
         for batch in progress_bar:
             users = batch['users'].to(device)
@@ -137,7 +140,6 @@ def main():
 
             optimizer.zero_grad()
             outputs = model(users, movies, user_neighbors, movie_neighbors, input_ids, attention_mask)
-
             loss = criterion(outputs, labels)
             loss.backward()
             optimizer.step()
@@ -145,8 +147,19 @@ def main():
             total_loss += loss.item()
             progress_bar.set_postfix({'training_loss': total_loss / (progress_bar.n + 1)})
 
+            # Calculate AUC and F1 score
+            train_auc_scores.append(roc_auc_score(labels.cpu().numpy(), outputs.detach().cpu().numpy()))
+            preds = (outputs > 0.5).float().cpu().numpy()
+            train_f1_scores.append(f1_score(labels.cpu().numpy(), preds, average='weighted'))
+
+        avg_train_auc = sum(train_auc_scores) / len(train_auc_scores)
+        avg_train_f1 = sum(train_f1_scores) / len(train_f1_scores)
+        logger.info(f"Epoch {epoch + 1}/{epochs} - Train AUC: {avg_train_auc:.4f}, Train F1: {avg_train_f1:.4f}")
+
         # Validation loop (optional)
         model.eval()
+        valid_auc_scores = []
+        valid_f1_scores = []
         with torch.no_grad():
             for batch in valid_loader:
                 users = batch['users'].to(device)
@@ -158,6 +171,14 @@ def main():
                 labels = batch['labels'].to(device)
 
                 outputs = model(users, movies, user_neighbors, movie_neighbors, input_ids, attention_mask)
+
+                valid_auc_scores.append(roc_auc_score(labels.cpu().numpy(), outputs.detach().cpu().numpy()))
+                preds = (outputs > 0.5).float().cpu().numpy()
+                valid_f1_scores.append(f1_score(labels.cpu().numpy(), preds, average='weighted'))
+
+            avg_valid_auc = sum(valid_auc_scores) / len(valid_auc_scores)
+            avg_valid_f1 = sum(valid_f1_scores) / len(valid_f1_scores)
+            logger.info(f"Epoch {epoch + 1}/{epochs} - Valid AUC: {avg_valid_auc:.4f}, Valid F1: {avg_valid_f1:.4f}")
 
 
 if __name__ == "__main__":

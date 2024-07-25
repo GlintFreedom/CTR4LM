@@ -64,11 +64,11 @@ class MyArguments(TrainingArguments):
         metadata={"help": "Log every X updates steps."},
     )
     per_device_train_batch_size: int = field(
-        default=8,
+        default=32,
         metadata={"help": "Batch size per GPU/TPU core/CPU for training."},
     )
     per_device_eval_batch_size: int = field(
-        default=8,
+        default=32,
         metadata={"help": "Batch size per GPU/TPU core/CPU for evaluation."},
     )
     num_train_epochs: int = field(
