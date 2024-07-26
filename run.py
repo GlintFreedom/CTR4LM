@@ -1,4 +1,5 @@
 import logging
+import os
 from tqdm import tqdm
 import torch
 from torch.utils.data import DataLoader
@@ -65,14 +66,19 @@ def main():
     set_seed(args.seed)
 
     # Load tokenizer
-    tokenizer = AutoTokenizer.from_pretrained(
-        args.lm_model,
-        cache_dir=args.cache_dir,
-        use_fast=args.use_fast_tokenizer,
-        revision=args.model_revision,
-        use_auth_token=True if args.use_auth_token else None,
-    )
-    logger.info("Tokenizer loaded")
+    tokenizer_save_path = f"{args.output_dir}/{args.model_mode}/tokenizer"
+    if os.path.exists(tokenizer_save_path):
+        tokenizer = AutoTokenizer.from_pretrained(tokenizer_save_path)
+        logger.info(f"Tokenizer loaded from {tokenizer_save_path}")
+    else:
+        tokenizer = AutoTokenizer.from_pretrained(
+            args.lm_model,
+            cache_dir=args.cache_dir,
+            use_fast=args.use_fast_tokenizer,
+            revision=args.model_revision,
+            use_auth_token=True if args.use_auth_token else None,
+        )
+        logger.info("Tokenizer loaded")
     showTokenizer(tokenizer)
 
     # Load datasets
@@ -117,6 +123,11 @@ def main():
     logger.info(f"Using device: {device}")
 
     model = MyModel(args, n_nodes, n_relations, tokenizer).to(device)
+    # Load model
+    model_save_path = f"{args.output_dir}/{args.model_mode}/model.pth"
+    if os.path.exists(model_save_path):
+        model.load_state_dict(torch.load(model_save_path))
+        logger.info(f"Model loaded from {model_save_path}")
 
     optimizer = torch.optim.AdamW(model.parameters(), lr=args.learning_rate)
     criterion = nn.BCELoss()
@@ -156,12 +167,13 @@ def main():
         avg_train_f1 = sum(train_f1_scores) / len(train_f1_scores)
         logger.info(f"Epoch {epoch + 1}/{epochs} - Train AUC: {avg_train_auc:.4f}, Train F1: {avg_train_f1:.4f}")
 
-        # Validation loop (optional)
+        # Validation loop
         model.eval()
         valid_auc_scores = []
         valid_f1_scores = []
+        valid_progress_bar = tqdm(valid_loader, desc='Validation', leave=False)
         with torch.no_grad():
-            for batch in valid_loader:
+            for batch in valid_progress_bar:
                 users = batch['users'].to(device)
                 movies = batch['movies'].to(device)
                 user_neighbors = batch['user_neighbors'].to(device)
@@ -179,6 +191,39 @@ def main():
             avg_valid_auc = sum(valid_auc_scores) / len(valid_auc_scores)
             avg_valid_f1 = sum(valid_f1_scores) / len(valid_f1_scores)
             logger.info(f"Epoch {epoch + 1}/{epochs} - Valid AUC: {avg_valid_auc:.4f}, Valid F1: {avg_valid_f1:.4f}")
+
+    # Save model and tokenizer
+    torch.save(model.state_dict(), f"{args.output_dir}/{args.model_mode}/model.pth")
+    logger.info("Model has saved")
+
+    tokenizer.save_pretrained(f"{args.output_dir}/{args.model_mode}/tokenizer")
+    logger.info("Tokenizer has saved")
+
+    # Testing loop
+    test_loader = DataLoader(datasets["test"], batch_size=args.per_device_eval_batch_size, collate_fn=data_collator)
+    model.eval()
+    test_auc_scores = []
+    test_f1_scores = []
+    test_progress_bar = tqdm(test_loader, desc='Testing', leave=False)
+    with torch.no_grad():
+        for batch in test_progress_bar:
+            users = batch['users'].to(device)
+            movies = batch['movies'].to(device)
+            user_neighbors = batch['user_neighbors'].to(device)
+            movie_neighbors = batch['movie_neighbors'].to(device)
+            input_ids = batch['input_ids'].to(device)
+            attention_mask = batch['attention_mask'].to(device)
+            labels = batch['labels'].to(device)
+
+            outputs = model(users, movies, user_neighbors, movie_neighbors, input_ids, attention_mask)
+
+            test_auc_scores.append(roc_auc_score(labels.cpu().numpy(), outputs.detach().cpu().numpy()))
+            preds = (outputs > 0.5).float().cpu().numpy()
+            test_f1_scores.append(f1_score(labels.cpu().numpy(), preds, average='weighted'))
+
+        avg_test_auc = sum(test_auc_scores) / len(test_auc_scores)
+        avg_test_f1 = sum(test_f1_scores) / len(test_f1_scores)
+        logger.info(f"Test AUC: {avg_test_auc:.4f}, Test F1: {avg_test_f1:.4f}")
 
 
 if __name__ == "__main__":
