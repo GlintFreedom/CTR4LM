@@ -1,0 +1,1102 @@
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+Tokenizer extended
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 40055
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 99900 samples
+MyDataset object with 99900 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+Tokenizer extended
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 40055
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 99900 samples
+MyDataset object with 99900 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+Tokenizer extended
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 40055
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 99900 samples
+MyDataset object with 99900 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+Tokenizer extended
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 40055
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+Tokenizer extended
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+Tokenizer extended
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+Tokenizer extended
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+Tokenizer extended
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+Tokenizer extended
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+Tokenizer extended
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+Tokenizer extended
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+Tokenizer extended
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+Tokenizer extended
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+Tokenizer extended
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+Tokenizer extended
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+Tokenizer extended
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+Tokenizer extended
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+Tokenizer extended
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+Tokenizer extended
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+Tokenizer extended
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+Tokenizer extended
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+Tokenizer extended
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+Tokenizer extended
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+Tokenizer extended
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+Tokenizer extended
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Epoch 1/5 - Train AUC: 0.7258, Train F1: 0.5176
+Epoch 1/5 - Valid AUC: 0.7264, Valid F1: 0.5925
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Epoch 1/5 - Train AUC: 0.7262, Train F1: 0.5167
+Epoch 1/5 - Valid AUC: 0.7263, Valid F1: 0.5922
+Epoch 2/5 - Train AUC: 0.7319, Train F1: 0.6010
+Epoch 2/5 - Valid AUC: 0.7216, Valid F1: 0.6112
+Epoch 3/5 - Train AUC: 0.7309, Train F1: 0.6095
+Epoch 3/5 - Valid AUC: 0.7212, Valid F1: 0.6119
+Epoch 4/5 - Train AUC: 0.7306, Train F1: 0.6110
+Epoch 4/5 - Valid AUC: 0.7203, Valid F1: 0.6126
+Epoch 5/5 - Train AUC: 0.7306, Train F1: 0.6142
+Epoch 5/5 - Valid AUC: 0.7211, Valid F1: 0.6137
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Epoch 1/50 - Train AUC: 0.7270, Train F1: 0.4938
+Epoch 1/50 - Valid AUC: 0.7292, Valid F1: 0.5751
+Epoch 2/50 - Train AUC: 0.7360, Train F1: 0.5904
+Epoch 2/50 - Valid AUC: 0.7246, Valid F1: 0.6057
+Epoch 3/50 - Train AUC: 0.7342, Train F1: 0.6054
+Epoch 3/50 - Valid AUC: 0.7238, Valid F1: 0.6099
+Epoch 4/50 - Train AUC: 0.7336, Train F1: 0.6081
+Epoch 4/50 - Valid AUC: 0.7232, Valid F1: 0.6110
+Epoch 5/50 - Train AUC: 0.7335, Train F1: 0.6099
+Epoch 5/50 - Valid AUC: 0.7234, Valid F1: 0.6119
+Epoch 6/50 - Train AUC: 0.7333, Train F1: 0.6110
+Epoch 6/50 - Valid AUC: 0.7231, Valid F1: 0.6128
+Epoch 7/50 - Train AUC: 0.7334, Train F1: 0.6124
+Epoch 7/50 - Valid AUC: 0.7228, Valid F1: 0.6138
+Epoch 8/50 - Train AUC: 0.7338, Train F1: 0.6157
+Epoch 8/50 - Valid AUC: 0.7234, Valid F1: 0.6172
+Epoch 9/50 - Train AUC: 0.7353, Train F1: 0.6200
+Epoch 9/50 - Valid AUC: 0.7256, Valid F1: 0.6223
+Epoch 10/50 - Train AUC: 0.7393, Train F1: 0.6288
+Epoch 10/50 - Valid AUC: 0.7303, Valid F1: 0.6314
+Epoch 11/50 - Train AUC: 0.7458, Train F1: 0.6395
+Epoch 11/50 - Valid AUC: 0.7374, Valid F1: 0.6413
+Epoch 12/50 - Train AUC: 0.7524, Train F1: 0.6517
+Epoch 12/50 - Valid AUC: 0.7413, Valid F1: 0.6521
+Epoch 13/50 - Train AUC: 0.7553, Train F1: 0.6620
+Epoch 13/50 - Valid AUC: 0.7427, Valid F1: 0.6600
+Epoch 14/50 - Train AUC: 0.7571, Train F1: 0.6686
+Epoch 14/50 - Valid AUC: 0.7435, Valid F1: 0.6640
+Epoch 15/50 - Train AUC: 0.7586, Train F1: 0.6725
+Epoch 15/50 - Valid AUC: 0.7441, Valid F1: 0.6679
+Epoch 16/50 - Train AUC: 0.7603, Train F1: 0.6757
+Epoch 16/50 - Valid AUC: 0.7454, Valid F1: 0.6696
+Epoch 17/50 - Train AUC: 0.7626, Train F1: 0.6789
+Epoch 17/50 - Valid AUC: 0.7466, Valid F1: 0.6716
+Epoch 18/50 - Train AUC: 0.7653, Train F1: 0.6821
+Epoch 18/50 - Valid AUC: 0.7479, Valid F1: 0.6747
+Epoch 19/50 - Train AUC: 0.7681, Train F1: 0.6857
+Epoch 19/50 - Valid AUC: 0.7500, Valid F1: 0.6768
+Epoch 20/50 - Train AUC: 0.7717, Train F1: 0.6894
+Epoch 20/50 - Valid AUC: 0.7518, Valid F1: 0.6797
+Epoch 21/50 - Train AUC: 0.7752, Train F1: 0.6932
+Epoch 21/50 - Valid AUC: 0.7540, Valid F1: 0.6810
+Epoch 22/50 - Train AUC: 0.7790, Train F1: 0.6967
+Epoch 22/50 - Valid AUC: 0.7554, Valid F1: 0.6840
+Epoch 23/50 - Train AUC: 0.7829, Train F1: 0.7001
+Epoch 23/50 - Valid AUC: 0.7570, Valid F1: 0.6860
+Epoch 24/50 - Train AUC: 0.7865, Train F1: 0.7038
+Epoch 24/50 - Valid AUC: 0.7592, Valid F1: 0.6868
+Epoch 25/50 - Train AUC: 0.7903, Train F1: 0.7074
+Epoch 25/50 - Valid AUC: 0.7606, Valid F1: 0.6890
+Epoch 26/50 - Train AUC: 0.7947, Train F1: 0.7111
+Epoch 26/50 - Valid AUC: 0.7620, Valid F1: 0.6907
+Epoch 27/50 - Train AUC: 0.7989, Train F1: 0.7152
+Epoch 27/50 - Valid AUC: 0.7633, Valid F1: 0.6926
+Epoch 28/50 - Train AUC: 0.8033, Train F1: 0.7190
+Epoch 28/50 - Valid AUC: 0.7650, Valid F1: 0.6937
+Epoch 29/50 - Train AUC: 0.8077, Train F1: 0.7233
+Epoch 29/50 - Valid AUC: 0.7661, Valid F1: 0.6951
+Epoch 30/50 - Train AUC: 0.8121, Train F1: 0.7275
+Epoch 30/50 - Valid AUC: 0.7667, Valid F1: 0.6968
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Tokenizer loaded
+
+	Tokenizer type: BertTokenizerFast
+	PL's path: models/bert-base-uncased
+	Size of vocab: 30522
+	Max length of input: 512
+	Special tokens: unk_token: [UNK], sep_token: [SEP], pad_token: [PAD], cls_token: [CLS], mask_token: [MASK]
+MyDataset object with 799448 samples
+MyDataset object with 98214 samples
+MyDataset object with 98149 samples
+Using device: cuda
+Epoch 1/50 - Train AUC: 0.7270, Train F1: 0.4938
+Epoch 1/50 - Valid AUC: 0.7292, Valid F1: 0.5751
+Epoch 2/50 - Train AUC: 0.7360, Train F1: 0.5904
+Epoch 2/50 - Valid AUC: 0.7246, Valid F1: 0.6057
+Epoch 3/50 - Train AUC: 0.7342, Train F1: 0.6054
+Epoch 3/50 - Valid AUC: 0.7238, Valid F1: 0.6099
+Epoch 4/50 - Train AUC: 0.7336, Train F1: 0.6081
+Epoch 4/50 - Valid AUC: 0.7232, Valid F1: 0.6110
+Epoch 5/50 - Train AUC: 0.7335, Train F1: 0.6099
+Epoch 5/50 - Valid AUC: 0.7234, Valid F1: 0.6119
+Epoch 6/50 - Train AUC: 0.7333, Train F1: 0.6110
+Epoch 6/50 - Valid AUC: 0.7231, Valid F1: 0.6128
+Epoch 7/50 - Train AUC: 0.7334, Train F1: 0.6124
+Epoch 7/50 - Valid AUC: 0.7228, Valid F1: 0.6138
+Epoch 8/50 - Train AUC: 0.7338, Train F1: 0.6157
+Epoch 8/50 - Valid AUC: 0.7234, Valid F1: 0.6172
+Epoch 9/50 - Train AUC: 0.7353, Train F1: 0.6200
+Epoch 9/50 - Valid AUC: 0.7256, Valid F1: 0.6223
+Epoch 10/50 - Train AUC: 0.7393, Train F1: 0.6288
+Epoch 10/50 - Valid AUC: 0.7303, Valid F1: 0.6314
+Epoch 11/50 - Train AUC: 0.7458, Train F1: 0.6395
+Epoch 11/50 - Valid AUC: 0.7374, Valid F1: 0.6413
+Epoch 12/50 - Train AUC: 0.7524, Train F1: 0.6517
+Epoch 12/50 - Valid AUC: 0.7413, Valid F1: 0.6521
+Epoch 13/50 - Train AUC: 0.7553, Train F1: 0.6620
+Epoch 13/50 - Valid AUC: 0.7427, Valid F1: 0.6600
+Epoch 14/50 - Train AUC: 0.7571, Train F1: 0.6686
+Epoch 14/50 - Valid AUC: 0.7435, Valid F1: 0.6640
+Epoch 15/50 - Train AUC: 0.7586, Train F1: 0.6725
+Epoch 15/50 - Valid AUC: 0.7441, Valid F1: 0.6679
+Epoch 16/50 - Train AUC: 0.7603, Train F1: 0.6757
+Epoch 16/50 - Valid AUC: 0.7454, Valid F1: 0.6696
+Epoch 17/50 - Train AUC: 0.7626, Train F1: 0.6789
+Epoch 17/50 - Valid AUC: 0.7466, Valid F1: 0.6716
+Epoch 18/50 - Train AUC: 0.7653, Train F1: 0.6821
+Epoch 18/50 - Valid AUC: 0.7479, Valid F1: 0.6747
+Epoch 19/50 - Train AUC: 0.7681, Train F1: 0.6857
+Epoch 19/50 - Valid AUC: 0.7500, Valid F1: 0.6768
+Epoch 20/50 - Train AUC: 0.7717, Train F1: 0.6894
+Epoch 20/50 - Valid AUC: 0.7518, Valid F1: 0.6797
+Epoch 21/50 - Train AUC: 0.7752, Train F1: 0.6932
+Epoch 21/50 - Valid AUC: 0.7540, Valid F1: 0.6810
+Epoch 22/50 - Train AUC: 0.7790, Train F1: 0.6967
+Epoch 22/50 - Valid AUC: 0.7554, Valid F1: 0.6840
+Epoch 23/50 - Train AUC: 0.7829, Train F1: 0.7001
+Epoch 23/50 - Valid AUC: 0.7570, Valid F1: 0.6860
+Epoch 24/50 - Train AUC: 0.7865, Train F1: 0.7038
+Epoch 24/50 - Valid AUC: 0.7592, Valid F1: 0.6868
+Epoch 25/50 - Train AUC: 0.7903, Train F1: 0.7074
+Epoch 25/50 - Valid AUC: 0.7606, Valid F1: 0.6890
+Epoch 26/50 - Train AUC: 0.7947, Train F1: 0.7111
+Epoch 26/50 - Valid AUC: 0.7620, Valid F1: 0.6907
+Epoch 27/50 - Train AUC: 0.7989, Train F1: 0.7152
+Epoch 27/50 - Valid AUC: 0.7633, Valid F1: 0.6926
+Epoch 28/50 - Train AUC: 0.8033, Train F1: 0.7190
+Epoch 28/50 - Valid AUC: 0.7650, Valid F1: 0.6937
+Epoch 29/50 - Train AUC: 0.8077, Train F1: 0.7233
+Epoch 29/50 - Valid AUC: 0.7661, Valid F1: 0.6951
+Epoch 30/50 - Train AUC: 0.8121, Train F1: 0.7275
+Epoch 30/50 - Valid AUC: 0.7667, Valid F1: 0.6968
+Epoch 31/50 - Train AUC: 0.8166, Train F1: 0.7320
+Epoch 31/50 - Valid AUC: 0.7681, Valid F1: 0.6978
+Epoch 32/50 - Train AUC: 0.8212, Train F1: 0.7362
+Epoch 32/50 - Valid AUC: 0.7686, Valid F1: 0.6994
+Epoch 33/50 - Train AUC: 0.8258, Train F1: 0.7405
+Epoch 33/50 - Valid AUC: 0.7693, Valid F1: 0.6994
+Epoch 34/50 - Train AUC: 0.8304, Train F1: 0.7447
+Epoch 34/50 - Valid AUC: 0.7696, Valid F1: 0.7003
+Epoch 35/50 - Train AUC: 0.8350, Train F1: 0.7491
+Epoch 35/50 - Valid AUC: 0.7698, Valid F1: 0.7007
+Epoch 36/50 - Train AUC: 0.8397, Train F1: 0.7537
+Epoch 36/50 - Valid AUC: 0.7707, Valid F1: 0.7007
+Epoch 37/50 - Train AUC: 0.8442, Train F1: 0.7581
+Epoch 37/50 - Valid AUC: 0.7706, Valid F1: 0.7013
+Epoch 38/50 - Train AUC: 0.8485, Train F1: 0.7623
+Epoch 38/50 - Valid AUC: 0.7705, Valid F1: 0.7018
+Epoch 39/50 - Train AUC: 0.8530, Train F1: 0.7664
+Epoch 39/50 - Valid AUC: 0.7708, Valid F1: 0.7020
+Epoch 40/50 - Train AUC: 0.8576, Train F1: 0.7710
+Epoch 40/50 - Valid AUC: 0.7707, Valid F1: 0.7019
+Epoch 41/50 - Train AUC: 0.8616, Train F1: 0.7750
+Epoch 41/50 - Valid AUC: 0.7705, Valid F1: 0.7016
+Epoch 42/50 - Train AUC: 0.8658, Train F1: 0.7793
+Epoch 42/50 - Valid AUC: 0.7703, Valid F1: 0.7019
+Epoch 43/50 - Train AUC: 0.8696, Train F1: 0.7834
+Epoch 43/50 - Valid AUC: 0.7704, Valid F1: 0.7015
+Epoch 44/50 - Train AUC: 0.8734, Train F1: 0.7875
+Epoch 44/50 - Valid AUC: 0.7695, Valid F1: 0.7016
+Epoch 45/50 - Train AUC: 0.8771, Train F1: 0.7914
+Epoch 45/50 - Valid AUC: 0.7688, Valid F1: 0.7016
+Epoch 46/50 - Train AUC: 0.8805, Train F1: 0.7953
+Epoch 46/50 - Valid AUC: 0.7686, Valid F1: 0.7011
+Epoch 47/50 - Train AUC: 0.8840, Train F1: 0.7989
+Epoch 47/50 - Valid AUC: 0.7681, Valid F1: 0.7002
+Epoch 48/50 - Train AUC: 0.8871, Train F1: 0.8023
+Epoch 48/50 - Valid AUC: 0.7676, Valid F1: 0.6998
+Epoch 49/50 - Train AUC: 0.8902, Train F1: 0.8056
+Epoch 49/50 - Valid AUC: 0.7668, Valid F1: 0.6997
+Epoch 50/50 - Train AUC: 0.8931, Train F1: 0.8089
+Epoch 50/50 - Valid AUC: 0.7662, Valid F1: 0.6991
